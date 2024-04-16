@@ -8,16 +8,13 @@ from multiprocessing import Pool
 # caculate the number of points in the unit circle
 # out of n points
 def monte_carlo_pi_part(n):
-
     count = 0
     for i in range(int(n)):
         x=random.random()
         y=random.random()
-
         # if it is within the unit circle
         if x*x + y*y <= 1:
             count=count+1
-
     #return
     return count
 
@@ -26,7 +23,7 @@ if __name__=='__main__':
 
     np1 = multiprocessing.cpu_count()
     print('You have {0:1d} CPUs'.format(np1))
-
+    
     np = int(os.getenv('CORECHOICE'))
     print(f'Using {np} CPUs')
 

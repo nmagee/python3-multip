@@ -1,11 +1,12 @@
-#!/bin/bash
+#!/bin/sh
 
 clear
+echo ""
 
 cores=`grep -c ^processor /proc/cpuinfo`
 # cores=`/usr/bin/nproc --all`
-echo "This container can use up to $cores cores"
-read -p 'How many would you like to use? ' corechoice
+echo "  This container can use up to $cores cores"
+read -p '  How many would you like to use? ' corechoice
 export CORECHOICE=$corechoice
 echo "- - - - - - - - - - - - - - - - - - - -"
 echo ""

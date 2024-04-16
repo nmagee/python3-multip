@@ -1,10 +1,7 @@
-FROM python:3.11
+FROM python:3.12-alpine3.19
 WORKDIR /
 COPY / /
-RUN apt update && \
-  apt install -y nano && \
-  rm -rf /var/lib/apt/lists/* && \
+RUN apk add nano && \
   chmod 755 /pi && \
-  mv /pi /usr/bin/pi && \
-  pip install -r /requirements.txt
+  mv /pi /usr/bin/pi
 CMD /usr/bin/pi
