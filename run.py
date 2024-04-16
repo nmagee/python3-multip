@@ -27,7 +27,7 @@ if __name__=='__main__':
     print('You have {0:1d} CPUs'.format(np1))
 
     np = 1
-    print(f"Using {np} CPUs')
+    print(f'Using {np} CPUs')
 
     # Nummber of points to use for the Pi estimation
     n = 1000000000
