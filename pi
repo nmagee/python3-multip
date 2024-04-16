@@ -1,0 +1,4 @@
+#!/bin/bash
+
+
+/usr/bin/time /usr/bin/env python3 calculate-pi.py
