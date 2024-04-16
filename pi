@@ -2,9 +2,10 @@
 
 clear
 
-cores=`/usr/bin/nproc --all`
+cores=`grep -c ^processor /proc/cpuinfo`
+# cores=`/usr/bin/nproc --all`
 echo "You have $cores possible cores to use"
 read -p 'How many would you like to use? ' corechoice
-export CORECHOICE=corechoice
+export CORECHOICE=$corechoice
 
 time /usr/bin/env python3 calculate-pi.py
