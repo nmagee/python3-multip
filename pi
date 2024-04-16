@@ -2,7 +2,7 @@
 
 clear
 
-cores=`nproc --all`
+cores=`/usr/bin/nproc --all`
 echo "You have $cores possible cores to use"
 read -p 'How many would you like to use? ' corechoice
 export CORECHOICE=corechoice
