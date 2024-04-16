@@ -1,5 +1,6 @@
 #!/usr/local/bin/python3
 
+import os
 import random
 import multiprocessing
 from multiprocessing import Pool
@@ -26,7 +27,7 @@ if __name__=='__main__':
     np1 = multiprocessing.cpu_count()
     print('You have {0:1d} CPUs'.format(np1))
 
-    np = 1
+    np = os.getenv['CORECHOICE']
     print(f'Using {np} CPUs')
 
     # Nummber of points to use for the Pi estimation

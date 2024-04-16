@@ -1,4 +1,9 @@
 #!/bin/bash
 
+clear
+
+echo "You have $cores possible cores to use"
+read -p 'How many would you like to use? ' corechoice
+export CORECHOICE=corechoice
 
 time /usr/bin/env python3 calculate-pi.py
