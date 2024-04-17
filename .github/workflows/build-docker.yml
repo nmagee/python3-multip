@@ -45,11 +45,12 @@ jobs:
 
       - name: Docker Scout
         id: docker-scout
-        if: ${{ github.event_name == 'push' }}
-        uses: docker/scout-action@dd36f5b0295baffa006aa6623371f226cc03e506
+        uses: docker/scout-action@v1
         with:
           command: cves
-          github-token: token
           image: ${{ steps.meta.outputs.tags }}
+          to: ${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
+          ignore-unchanged: true
           only-severities: critical,high
-          exit-code: true
+          write-comment: true
+          github-token: ${{ secrets.GH_TOKEN}}
