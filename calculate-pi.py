@@ -30,7 +30,7 @@ if __name__=='__main__':
     # Nummber of points to use for the Pi estimation
     n = 1000000000
 
-    print(f'Running {n} point estimation')
+    print(f' Running: {n} point estimation')
 
     # iterable with a list of points to generate in each worker
     # each worker process gets n/np number of points to calculate Pi from
@@ -44,4 +44,4 @@ if __name__=='__main__':
     # parallel map
     count=pool.map(monte_carlo_pi_part, part_count)
 
-    print("Estimated value of Pi :: ", sum(count)/(n*1.0)*4)
+    print("Estimated value of Pi: ", sum(count)/(n*1.0)*4)
