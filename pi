@@ -11,4 +11,4 @@ read -p '  How many would you like to use? ' corechoice
 export CORECHOICE=$corechoice
 echo "- - - - - - - - - - - - - - - - - - - -"
 echo ""
-time /usr/bin/env python3 /calculate-pi.py
+time -h /usr/bin/env python3 /calculate-pi.py

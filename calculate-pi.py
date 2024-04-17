@@ -44,4 +44,5 @@ if __name__=='__main__':
     # parallel map
     count=pool.map(monte_carlo_pi_part, part_count)
 
-    print("Estimated value of Pi: ", sum(count)/(n*1.0)*4)
+    print("      Pi: ", sum(count)/(n*1.0)*4)
+    print("")
