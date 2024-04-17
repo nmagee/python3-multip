@@ -22,10 +22,10 @@ def monte_carlo_pi_part(n):
 if __name__=='__main__':
 
     np1 = multiprocessing.cpu_count()
-    print('You have {0:1d} CPUs'.format(np1))
+    print('Possible: {0:1d} CPUs'.format(np1))
     
     np = int(os.getenv('CORECHOICE'))
-    print(f'Using {np} CPUs')
+    print(f'   Using: {np} CPUs')
 
     # Nummber of points to use for the Pi estimation
     n = 1000000000

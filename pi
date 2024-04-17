@@ -2,7 +2,8 @@
 
 clear
 echo ""
-
+echo "  Multicore Pi Calculator"
+echo "- - - - - - - - - - - - - - - - - - - -"
 cores=`grep -c ^processor /proc/cpuinfo`
 # cores=`/usr/bin/nproc --all`
 echo "  This container can use up to $cores cores"

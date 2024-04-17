@@ -1,4 +1,4 @@
-name: container-build
+name: ghcr-build
 
 on:
   push:
